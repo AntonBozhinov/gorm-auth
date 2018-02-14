@@ -13,5 +13,6 @@ type Auth struct {
 func New(db *gorm.DB) *Auth {
 	a := &Auth{DB: db}
 	a.DB.AutoMigrate(&Session{})
+	a.DB.AutoMigrate(&User{})
 	return a
 }
