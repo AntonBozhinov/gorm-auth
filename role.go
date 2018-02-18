@@ -19,4 +19,5 @@ type Role struct {
 	Description string
 	Category RoleCategory
 	CategoryID uint
+	Permissions []Permission
 }
