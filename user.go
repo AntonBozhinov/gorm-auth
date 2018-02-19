@@ -7,8 +7,8 @@ import (
 // User struct represents system user
 type User struct {
 	gorm.Model
-	Email string
+	Email    string
 	Username string
 	Password string
-	Roles []Role
+	Roles    []Role
 }

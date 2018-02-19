@@ -1,16 +1,17 @@
 package auth
 
 import (
-	"github.com/jinzhu/gorm"
 	"time"
+
+	"github.com/jinzhu/gorm"
 )
 
 // Session persist user session
 type Session struct {
 	gorm.Model
 	Language  string
-	UserID 	  uint
-	User   	  User
+	UserID    uint
+	User      User
 	RemoteIP  string
 	UserAgent string
 	ExpireAt  time.Time
