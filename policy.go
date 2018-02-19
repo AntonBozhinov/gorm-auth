@@ -14,16 +14,16 @@ type AccessPolicy struct {
 	expiresOn       time.Time
 	SessionDuration time.Time
 	Credentials     []PolicyCredential
+	isEnabled       bool
 }
 
 // AccessTimeFrame type
 type AccessTimeFrame struct {
 	gorm.Model
-	ActivePeriod string
-	ActivateAt time.Time
+	ActivePeriod   string
+	ActivateAt     time.Time
 	ActiveWeekDays int
 }
-
 
 // PolicyCredential type
 type PolicyCredential struct {
@@ -42,3 +42,5 @@ type PolicyCredential struct {
 	Policy              AccessPolicy
 	AllowedAttempts     uint
 }
+
+
